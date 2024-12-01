@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --dark: #121212;
+    --light: #ffffff;
+    --blue: #29A8FF;
+    --btn: #303136;
+    --fontblue: #29A8FF;
+    --light-bg: #f0f0f0; /* Fond clair */
+    --light-btn: #eeeeee; /* Boutons clairs */
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.calcul {
+    background-color: var(--dark);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    width: 500px; /* Changer la taille à 500px */
+    height: 580px;
+    transition: background-color 0.3s;
+}
+
+body.light-mode .calcul {
+    background-color: var(--light-bg); /* Couleur de fond en mode clair */
+}
+
+h2 {
+    text-align: center;
+    color: var(--light);
+}
+
+.view {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: var(--light);
+    border: 2px gray solid ;
+}
+
+.button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--blue);
+    color: white;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.zero {
+    grid-column: span 2; /* Étend le bouton 0 sur 2 colonnes */
+}
+
+#toggle-theme {
+    background-color: var(--btn);
+    color: var(--fontblue);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+#toggle-theme:hover {
+    background-color: var(--blue);
+    color: white;
+    transform: scale(1.1);
+}
+
+#toggle-theme:active {
+    transform: scale(0.95);
+}
